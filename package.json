@@ -1,0 +1,28 @@
+{
+  "name": "codellegeup",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erick-Gonza/codellegeUp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erick-Gonza/codellegeUp/issues"
+  },
+  "homepage": "https://github.com/Erick-Gonza/codellegeUp#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.0.1"
+  }
+}
