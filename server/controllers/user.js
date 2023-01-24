@@ -1,6 +1,5 @@
 // Description: This file contains the functions that will be used to interact with the database
 
-import { pool } from '../database.js'
 import { handleHttpError } from '../utils/error.handle.js'
 import {
   serviceUserCreate,
