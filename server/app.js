@@ -3,7 +3,7 @@ import cors from 'cors'
 import 'dotenv/config'
 import { router } from './routes/index.routes.js'
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT
 const app = express()
 
 app.use(cors())
