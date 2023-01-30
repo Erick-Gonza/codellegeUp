@@ -35,11 +35,18 @@ const getUserById = async (req, res) => {
 // Create a user
 const createUser = async (req, res) => {
   try {
-    const { name, lastName, email, password } = req.body
-    const response = await serviceUserCreate(name, lastName, email, password)
+    const { name, lastname, username, email, password, role } = req.body
+    const response = await serviceUserCreate(
+      name,
+      lastname,
+      username,
+      email,
+      password,
+      role
+    )
     res.json({
       id: response.insertId,
-      name,
+      username,
       email,
     })
   } catch (error) {
@@ -51,17 +58,20 @@ const createUser = async (req, res) => {
 const updateUser = async (req, res) => {
   try {
     const { id } = req.params
-    const { name, lastName, email, password } = req.body
+    const { name, lastname, username, email, password, role } = req.body
     const response = await serviceUserUpdate(
       id,
       name,
-      lastName,
+      lastname,
+      username,
       email,
-      password
+      password,
+      role
     )
     res.json({
       name,
-      lastName,
+      lastname,
+      username,
       email,
       password: '********',
     })
