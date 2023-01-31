@@ -5,7 +5,7 @@ import {
   getCategories,
   getCategoryById,
   updateCategory,
-} from '../../controllers/category/categoryController.js'
+} from '../../controllers/category/category.controller.js'
 
 const categoryRouter = Router()
 
