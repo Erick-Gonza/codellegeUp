@@ -1,5 +1,12 @@
 // Description: This file contains the functions that will be used to interact with the database
 
+import {
+  serviceCategory,
+  serviceCategoryCreate,
+  serviceCategoryDelete,
+  serviceCategoryId,
+  serviceCategoryUpdate,
+} from '../../services/category/category.js'
 import { handleHttpError } from '../../utils/error.handle.js'
 
 // Get all categories
@@ -43,7 +50,7 @@ const createCategory = async (req, res) => {
 const updateCategory = async (req, res) => {
   try {
     const { id } = req.params
-    const { name, lastname, username, email, password, role } = req.body
+    const { name } = req.body
     const response = await serviceCategoryUpdate(id, name)
     res.json({
       name,

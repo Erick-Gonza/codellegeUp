@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import { categoryRouter } from './category/category.routes.js'
 import { userRouter } from './user/user.routes.js'
+import { categoryRouter } from './category/category.routes.js'
 
 const router = Router()
 
