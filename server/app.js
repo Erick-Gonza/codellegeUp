@@ -3,6 +3,8 @@ import express from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
 import { router } from './routes/index.routes.js'
+import { db } from '../database/db.js'
+import { Category } from './models/index.js'
 
 const port = process.env.PORT
 const app = express()
@@ -15,6 +17,8 @@ app.use(morgan('tiny'))
 //Main route
 app.use('/api', router)
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`)
-})
+db.sync({ force: true }).then(
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`)
+  })
+)
