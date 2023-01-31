@@ -1,11 +1,11 @@
 import { Router } from 'express'
 import {
-  getUsers,
   createUser,
-  getUserById,
-  updateUser,
   deleteUser,
-} from '../controllers/user.js'
+  getUserById,
+  getUsers,
+  updateUser,
+} from '../../controllers/user/userController.js'
 
 const userRouter = Router()
 

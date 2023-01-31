@@ -1,4 +1,4 @@
-import { pool } from '../database.js'
+import { pool } from '../../database.js'
 
 const serviceUsers = async () => {
   const query = 'SELECT * FROM USER'

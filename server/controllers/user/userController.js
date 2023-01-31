@@ -1,13 +1,13 @@
 // Description: This file contains the functions that will be used to interact with the database
 
-import { handleHttpError } from '../utils/error.handle.js'
+import { handleHttpError } from '../../utils/error.handle.js'
 import {
   serviceUserCreate,
   serviceUserDelete,
   serviceUserId,
   serviceUsers,
   serviceUserUpdate,
-} from '../services/user.js'
+} from '../../services/user/user.js'
 
 // Get all users
 const getUsers = async (req, res) => {
