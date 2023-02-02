@@ -18,9 +18,10 @@ Category.init(
   {
     sequelize: db,
     modelName: 'Category',
+    timestamps: false,
   }
 )
 
-console.log(Category === db.models.Category)
+// console.log(Category === db.models.Category)
 
 export default Category
